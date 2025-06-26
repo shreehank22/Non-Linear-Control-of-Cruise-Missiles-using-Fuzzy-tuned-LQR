@@ -104,8 +104,4 @@ Non-Linear-Control-of-Cruise-Missiles-using-Fuzzy-tuned-LQR/
 **Shreehan Kate**
 For collaborations or academic inquiries, feel free to reach out.
 
----
 
-## 📄 License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
