@@ -1,10 +1,10 @@
-# 🚀 Non-Linear Control of Cruise Missiles using Fuzzy-Tuned LQR
+#  Non-Linear Control of Cruise Missiles using Fuzzy-Tuned LQR
 
 This repository presents a **fuzzy logic-based intelligent control strategy** to enhance the performance of a **Linear Quadratic Regulator (LQR)** for a cruise missile system modeled using **feedback linearization**. By integrating a fuzzy inference system to adaptively tune LQR parameters, the controller demonstrates superior robustness to disturbances and achieves a **28.92% improvement in tracking performance**.
 
 ---
 
-## 📌 Highlights
+## Highlights
 
 * ✅ Designed a **Fuzzy Inference System (FIS)** to intelligently tune LQR weights
 * ✅ Enhanced robustness to external disturbances
@@ -14,7 +14,7 @@ This repository presents a **fuzzy logic-based intelligent control strategy** to
 
 ---
 
-## 🧠 Methodology
+##  Methodology
 
 1. **System Modeling:**
 
@@ -36,7 +36,7 @@ This repository presents a **fuzzy logic-based intelligent control strategy** to
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 Non-Linear-Control-of-Cruise-Missiles-using-Fuzzy-tuned-LQR/
@@ -49,7 +49,7 @@ Non-Linear-Control-of-Cruise-Missiles-using-Fuzzy-tuned-LQR/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Requirements
 
@@ -78,7 +78,7 @@ Non-Linear-Control-of-Cruise-Missiles-using-Fuzzy-tuned-LQR/
 
 ---
 
-## 📊 Results Summary
+##  Results Summary
 
 * **Fuzzy-Tuned LQR** significantly outperformed fixed-gain LQR in:
 
@@ -87,19 +87,10 @@ Non-Linear-Control-of-Cruise-Missiles-using-Fuzzy-tuned-LQR/
   * Control efficiency
 
 * **Improvement:**
-  ✅ *28.92%* better tracking performance under simulated disturbance conditions
-
+  *28.92%* better tracking performance under simulated disturbance conditions
 ---
 
-## 📚 References
-
-* Kuo, B.C., & Golnaraghi, F. (2003). *Automatic Control Systems*
-* Tanaka, K., & Wang, H.O. (2001). *Fuzzy Control Systems Design and Analysis*
-* Bryson, A.E., & Ho, Y.C. (1975). *Applied Optimal Control*
-
----
-
-## 👨‍💻 Author
+## Author
 
 **Shreehan Kate**
 For collaborations or academic inquiries, feel free to reach out.
