@@ -1,66 +1,67 @@
-#  Non-Linear Control of Cruise Missiles using Fuzzy-Tuned LQR
+# **Nonlinear Control of Cruise Missiles using Fuzzy-Tuned LQR**
 
-This repository presents a **fuzzy logic-based intelligent control strategy** to enhance the performance of a **Linear Quadratic Regulator (LQR)** for a cruise missile system modeled using **feedback linearization**. By integrating a fuzzy inference system to adaptively tune LQR parameters, the controller demonstrates superior robustness to disturbances and achieves a **28.92% improvement in tracking performance**.
-
----
-
-## Highlights
-
-* ✅ Designed a **Fuzzy Inference System (FIS)** to intelligently tune LQR weights
-* ✅ Enhanced robustness to external disturbances
-* ✅ Applied on **nonlinear cruise missile dynamics** with feedback linearization
-* ✅ Achieved **28.92% improvement** in tracking performance
-* ✅ Validated through extensive MATLAB/Simulink simulations
+This repository presents a **fuzzy logic-based adaptive control strategy** to enhance the performance of a **Linear Quadratic Regulator (LQR)** applied to a nonlinear cruise missile model. By integrating a fuzzy inference system (FIS) to adaptively tune LQR weights, the controller improves system robustness and achieves a **28.92% improvement in tracking performance** under delay and disturbance scenarios.
 
 ---
 
-##  Methodology
+## **Highlights**
 
-1. **System Modeling:**
-
-   * Nonlinear dynamics of a cruise missile are modeled and linearized using **feedback linearization**.
-
-2. **Conventional LQR:**
-
-   * Baseline control designed using standard LQR with fixed $Q$ and $R$ matrices.
-
-3. **Fuzzy-Tuned LQR:**
-
-   * Developed a **FIS (FLC\_Final1.fis)** to dynamically adjust the LQR weights based on system error and state feedback.
-   * Improved adaptability and transient response under varying conditions.
-
-4. **Simulation & Validation:**
-
-   * Compared fuzzy-tuned LQR and conventional LQR in Simulink (`Final_PAPER2_wtdelay_fuzzy.slx` and `Final_PAPER2_wtdelay_LQR.slx`).
-   * Assessed improvements in tracking error, control effort, and system stability.
+* Adaptive **Fuzzy Inference System (FIS)** to dynamically tune LQR weighting matrices.
+* Addresses **actuator time delays** and **control surface uncertainties**.
+* Applies **feedback linearization** to model nonlinear cruise missile dynamics.
+* Achieves **significantly improved tracking** and control effort efficiency.
+* Validated through **MATLAB/Simulink simulations** with disturbances.
 
 ---
 
-##  Repository Structure
+## **Updated Repository Structure**
 
-```
+```plaintext
 Non-Linear-Control-of-Cruise-Missiles-using-Fuzzy-tuned-LQR/
 │
-├── Final_PAPER2_wtdelay_LQR.slx        # Simulink model with standard LQR control
-├── Final_PAPER2_wtdelay_fuzzy.slx      # Simulink model with fuzzy-tuned LQR control
-├── FLC_Final1.fis                      # Fuzzy Inference System (for tuning LQR)
-├── README.md                           # Project documentation
+├── Codes/                           # MATLAB control & simulation scripts
+│   ├── FuzzyLogicController_code.m      # Main FLC execution script
+│   ├── RuleInference.m                 # constructes rule inference plots
+│   └── controlSurfaceSimulation.m      # Generates control surface plots via gensurf
+│
+├── Simulink Files/                  # System-level simulation models
+│   └── Final_PAPER2_wtdelay_fuzzy.slx   # Simulink model with fuzzy-tuned LQR
+│
+├── FLC_Final1.fis                  # FIS file (defines fuzzy rules and membership functions)
+├── LICENSE.txt                     # Licensing information
+├── README.md                       # Project documentation
 ```
 
 ---
 
-##  Getting Started
+## **Methodology**
 
-### Requirements
+1. **Nonlinear Modeling & Linearization**
+   The missile's nonlinear longitudinal dynamics are linearized using feedback linearization to allow LQR-based design.
+
+2. **Standard LQR Controller**
+   A fixed-gain LQR controller is initially implemented to serve as the baseline.
+
+3. **Fuzzy Logic Controller Design**
+   A FIS (`FLC_Final1.fis`) adaptively tunes the LQR weight matrices $Q$ and $R$ based on the real-time system state and error metrics.
+
+4. **Simulation & Analysis**
+   Implemented and validated in Simulink using `Final_PAPER2_wtdelay_fuzzy.slx`.
+
+---
+
+## **How to Run**
+
+### **Prerequisites**
 
 * MATLAB R2020a or later
-* Control System Toolbox
-* Fuzzy Logic Toolbox
 * Simulink
+* Fuzzy Logic Toolbox
+* Control System Toolbox
 
-### Steps to Run
+### **Steps**
 
-1. **Clone the repository:**
+1. **Clone this Repository**
 
    ```bash
    git clone https://github.com/shreehank22/Non-Linear-Control-of-Cruise-Missiles-using-Fuzzy-tuned-LQR.git
@@ -70,29 +71,39 @@ Non-Linear-Control-of-Cruise-Missiles-using-Fuzzy-tuned-LQR/
 2. **Open MATLAB**, then:
 
    ```matlab
-   open('Final_PAPER2_wtdelay_fuzzy.slx')      % For fuzzy-tuned LQR
-   open('Final_PAPER2_wtdelay_LQR.slx')        % For conventional LQR
+   open('Simulink Files/Final_PAPER2_wtdelay_fuzzy.slx')
+   open('FLC_Final1.fis')
    ```
 
-3. **Run the simulations and compare results**.
+3. **Run Simulations** to observe performance differences between standard LQR and fuzzy-tuned LQR.
+
+4. **Modify or Expand Rules** in the `.fis` file using the **FIS editor** (`fisTool` in MATLAB).
 
 ---
 
-##  Results Summary
+## **Results Summary**
 
-* **Fuzzy-Tuned LQR** significantly outperformed fixed-gain LQR in:
+* **Fuzzy-tuned LQR** outperforms fixed LQR in:
 
-  * Tracking error reduction
-  * Disturbance rejection
-  * Control efficiency
+  * Tracking accuracy
+  * Stability under delay/disturbances
+  * Reduced overshoot and smoother transient response
 
-* **Improvement:**
-  *28.92%* better tracking performance under simulated disturbance conditions
+* **Performance Improvement**:
+  **28.92%** reduction in tracking error with fuzzy-adaptive tuning
+
 ---
 
-## Author
+## **License**
+
+This project is licensed under the MIT License. See [LICENSE.txt](./LICENSE.txt) for details.
+
+---
+
+## **Author**
 
 **Shreehan Kate**
-For collaborations or academic inquiries, feel free to reach out.
+For academic collaborations or technical inquiries, feel free to connect.
+
 
 
